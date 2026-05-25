@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* 商务冷淡色调 */
+  --color-primary: #2C3E50;
+  --color-secondary: #34495E;
+  --color-accent: #3498DB;
+  --color-success: #27AE60;
+  --color-background: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-border: #E8ECEF;
+  --color-text-primary: #2C3E50;
+  --color-text-secondary: #7F8C8D;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A0AEC0;
+}
+
+/* 全局优化 */
+body {
+  background: linear-gradient(to bottom, #F8F9FA 0%, #FFFFFF 100%);
+  min-height: 100vh;
+}
+
+/* 卡片阴影优化 */
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
