@@ -144,8 +144,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-xl font-semibold text-slate-800 mb-2">
-              HMI走查笔记转换工具
+            <h1 className="text-xl font-semibold text-slate-800 mb-2 flex items-center justify-center gap-2">
+              <img src="/favicon.png" alt="icon" className="w-7 h-7" />
+              HMI走查小助手
             </h1>
             <p className="text-sm text-slate-500 mb-4">
               智能解析HMI走查笔记，自动提取关键信息并生成符合TB系统导入规范的Excel文件
