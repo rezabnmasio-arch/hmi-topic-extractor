@@ -25,7 +25,7 @@ export const PROJECT_GROUPS: Record<ProjectGroup, { name: string; description: s
   },
   'PK2C8295': {
     name: 'PK2C-8295',
-    description: 'PK2C-8295 项目组（41字段）'
+    description: 'PK2C-8295 项目组（49字段）'
   }
 };
 
@@ -272,11 +272,11 @@ function createLK1A26EFields(): LK1A26EFields {
 }
 
 // ============================================
-// PK2C-8295 表头定义（41个字段）
+// PK2C-8295 表头定义（49个字段）
 // ============================================
 
 /**
- * PK2C-8295 TB导入字段接口定义（41个字段）
+ * PK2C-8295 TB导入字段接口定义（49个字段）
  */
 export interface PK2C8295Fields {
   "标题*": string;
@@ -293,6 +293,13 @@ export interface PK2C8295Fields {
   "故障时间点*": string;
   "缺陷分类*": string;
   "指摘人*": string;
+  "是否走查活动*": string;
+  "走查课题分类*": string;
+  "走查课题检出角色A（走查人员）*": string;
+  "走查课题检出角色B（该课题本应检出角色）*": string;
+  "走查课题检出者B（该课题本应检出者）*": string;
+  "走查课题检出者B是否已检出*": string;
+  "走查课题关联TB*": string;
   "指摘源*": string;
   "指摘阶段*": string;
   "发生概率*": string;
@@ -301,6 +308,7 @@ export interface PK2C8295Fields {
   "优先级*": string;
   "指摘DA系统版本*": string;
   "指摘APP版本*": string;
+  "是否面向工厂AIO活动*": string;
   "指摘车辆信息": string;
   "发现途径": string;
   "Bug等级": string;
@@ -341,6 +349,13 @@ function createPK2C8295Fields(): PK2C8295Fields {
     "故障时间点*": "",
     "缺陷分类*": "02 系统设置",
     "指摘人*": "徐天雅",
+    "是否走查活动*": "否",
+    "走查课题分类*": "",
+    "走查课题检出角色A（走查人员）*": "",
+    "走查课题检出角色B（该课题本应检出角色）*": "",
+    "走查课题检出者B（该课题本应检出者）*": "",
+    "走查课题检出者B是否已检出*": "",
+    "走查课题关联TB*": "",
     "指摘源*": "内部-交互",
     "指摘阶段*": "PT",
     "发生概率*": "必现",
@@ -349,6 +364,7 @@ function createPK2C8295Fields(): PK2C8295Fields {
     "优先级*": "普通",
     "指摘DA系统版本*": getCurrentDate(),
     "指摘APP版本*": "-",
+    "是否面向工厂AIO活动*": "否",
     "指摘车辆信息": "-",
     "发现途径": "",
     "Bug等级": "",
@@ -599,10 +615,12 @@ const LK1A26E_COL_WIDTHS = [
  */
 const PK2C8295_COL_WIDTHS = [
   {wch: 30}, {wch: 15}, {wch: 20}, {wch: 10}, {wch: 15}, {wch: 15}, {wch: 10}, {wch: 15},
-  {wch: 20}, {wch: 20}, {wch: 50}, {wch: 20}, {wch: 15}, {wch: 10}, {wch: 15},
-  {wch: 10}, {wch: 10}, {wch: 10}, {wch: 10}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15},
-  {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 10}, {wch: 15}, {wch: 15},
-  {wch: 15}, {wch: 10}, {wch: 12}, {wch: 10}, {wch: 10}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}
+  {wch: 20}, {wch: 20}, {wch: 50}, {wch: 20}, {wch: 15}, {wch: 10},
+  {wch: 12}, {wch: 15}, {wch: 20}, {wch: 20}, {wch: 20}, {wch: 15}, {wch: 15},
+  {wch: 15}, {wch: 10}, {wch: 10}, {wch: 10}, {wch: 10}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15},
+  {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15},
+  {wch: 10}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 10},
+  {wch: 12}, {wch: 10}, {wch: 10}, {wch: 15}
 ];
 
 /**
